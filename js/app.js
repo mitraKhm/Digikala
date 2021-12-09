@@ -1,5 +1,5 @@
 (function () {
- 
+
     var productRoot = document.querySelector('.productRoot')
     var currentPageNumber = 1;
 
@@ -18,7 +18,7 @@
             document.getElementById("totalsItems")
                 .innerText = app.view.toFarsiNumber(app.products.length) + ' کالا'
 
-        
+
                app.repository.getMostViwedProductByPage(currentPageNumber).forEach((element) => {
                 productRoot.appendChild(app.view.renderProduct(
                     element.title,
@@ -29,7 +29,7 @@
                     ));
 
             });
-           
+
             app.view.renderpagination(app.products.length, 36, currentPageNumber);
             app.view.renderFilters(currentActiveFilter);
         });
@@ -56,7 +56,7 @@
                         element.price,
                         ));
                 });
-            };
+            }
         });
 
 
@@ -98,7 +98,4 @@
 
 
     })
-
-
-
 })();
