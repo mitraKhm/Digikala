@@ -30,5 +30,4 @@ function getMostExpensiveProductByPage (pageNumber){
     .sort(((a , b) => b.price - a.price))
     .slice((pageNumber - 1) * 36 , pageNumber * 36); 
 };
-
 })();
